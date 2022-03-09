@@ -5,6 +5,10 @@ import IconButton from "./Base/IconButton";
 import Button from "./Base/Button";
 
 import HeartIcon from "./Icons/Heart";
+import BookmarkIcon from "./Icons/Bookmark";
+import CommentIcon from "./Icons/Comment";
+import ShareIcon from "./Icons/Share";
+import ReactionIcon from "./Icons/Reaction";
 
 const ItemCard = () => {
   return (
@@ -31,16 +35,19 @@ const ItemCard = () => {
             <IconButton>
               <HeartIcon size="4" />
             </IconButton>
+            <div className="w-2"></div>
             <IconButton>
-              <HeartIcon size="4" />
+              <CommentIcon size="4" />
             </IconButton>
+            <div className="w-2"></div>
             <IconButton>
-              <HeartIcon size="4" />
+              <ShareIcon size="4" />
             </IconButton>
+            <div className="w-2"></div>
           </div>
           <div className="flex">
             <IconButton>
-              <HeartIcon size="4" />
+              <BookmarkIcon size="4" />
             </IconButton>
           </div>
         </div>
@@ -64,7 +71,7 @@ const ItemCard = () => {
           className="px-4 py-2 flex"
         >
           <IconButton>
-            <HeartIcon size="4" />
+            <ReactionIcon size="4" />
           </IconButton>
           <input
             className="px-4 outline-none w-full"
