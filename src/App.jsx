@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+import { useState } from "react";
+import TopBar from "./Components/TopBar";
+import Logo from "./Components/Logo";
+import SearchBar from "./Components/SearchBar";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <h1 className="text-2xl p-4">Hello!</h1>
+    <div className="App bg-gray-100 w-screen h-screen">
+      <TopBar>
+        <Logo />
+        <SearchBar />
+        <div className="flex">Actions go here</div>
+      </TopBar>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
