@@ -18,13 +18,13 @@ struct ContentView: View {
                 Text("Editorial")
                 Text("Notifications")
                 Text("Profile")
-            } tabs: {
-                AppIcons.home
-                AppIcons.search
-                AppIcons.editorial
-                AppIcons.notifications
-                AppIcons.profile
-            }
+            } tabs: {[
+                AppIcons.home,
+                AppIcons.search,
+                AppIcons.editorial,
+                AppIcons.notifications,
+                AppIcons.profile,
+            ]}
         }
     }
 }

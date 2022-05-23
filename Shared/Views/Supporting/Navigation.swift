@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct TabNav<Content>: View where Content: View {
+struct TabNav: View  {
     @State private var selectedPage: Int = 0
     
-    let pages: [Content]
+    let pages: [AnyView]
     let tabs: [String]
     
     var body: some View {
@@ -32,8 +32,8 @@ struct TabNav<Content>: View where Content: View {
 
     }
     
-    init(@ViewBuilder pages: () -> [Content], @ViewBuilder tabs: ()->[String]) {
-        self.pages = pages()
+    init<Views>(@ViewBuilder pages: () -> TupleView<Views>, tabs: ()->[String]) {
+        self.pages = pages().getViews
         self.tabs = tabs()
     }
 }
@@ -51,5 +51,31 @@ private struct NavIcon: View {
                 selected = index
             }
             .font(.title3)
+    }
+}
+
+extension TupleView {
+    var getViews: [AnyView] {
+        makeArray(from: value)
+    }
+    
+    private struct GenericView {
+        let body: Any
+        
+        var anyView: AnyView? {
+            AnyView(_fromValue: body)
+        }
+    }
+    
+    private func makeArray<Tuple>(from tuple: Tuple) -> [AnyView] {
+        func convert(child: Mirror.Child) -> AnyView? {
+            withUnsafeBytes(of: child.value) { ptr -> AnyView? in
+                let binded = ptr.bindMemory(to: GenericView.self)
+                return binded.first?.anyView
+            }
+        }
+        
+        let tupleMirror = Mirror(reflecting: tuple)
+        return tupleMirror.children.compactMap(convert)
     }
 }
