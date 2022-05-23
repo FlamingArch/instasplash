@@ -26,7 +26,7 @@ struct TabNav: View  {
                     ForEach(0..<tabs.count) { NavIcon(icon:tabs[$0], selected: $selectedPage, index: $0, geometry: geo) }
                 }
                 .frame(width: geo.size.width)
-                .background(Material.regular)
+                .background(Material.bar)
             }
         }
 
@@ -50,7 +50,7 @@ private struct NavIcon: View {
             .onTapGesture {
                 selected = index
             }
-            .font(.title3)
+            .font(.system(size: 20))
     }
 }
 
