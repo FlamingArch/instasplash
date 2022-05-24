@@ -21,7 +21,7 @@ struct ContentView: View {
             } tabs: {[
                 AppIcons.home,
                 AppIcons.search,
-                AppIcons.editorial,
+                AppIcons.add,
                 AppIcons.notifications,
                 AppIcons.profile,
             ]}

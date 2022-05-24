@@ -26,7 +26,7 @@ struct TabNav: View  {
                     ForEach(0..<tabs.count) { NavIcon(icon:tabs[$0], selected: $selectedPage, index: $0, geometry: geo) }
                 }
                 .frame(width: geo.size.width)
-                .background(Material.bar)
+                .background(.background)
             }
         }
 
@@ -45,7 +45,7 @@ private struct NavIcon: View {
     var geometry: GeometryProxy
     
     var body: some View {
-        Image(systemName: icon + (selected == index ? ".fill" : ""))
+        Image(icon + (selected == index ? ".filled" : ""))
             .frame(width: geometry.size.width / 6, height: 64, alignment: .center)
             .onTapGesture {
                 selected = index

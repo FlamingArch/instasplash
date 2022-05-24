@@ -8,9 +8,9 @@
 import Foundation
 
 struct AppIcons {
-   static let home = "house"
-   static let search = "magnifyingglass.circle"
-   static let editorial = "newspaper"
-   static let notifications = "bell"
-   static let profile = "person.circle"
+   static let home = "home"
+   static let search = "search"
+   static let add = "add.box"
+   static let notifications = "notifications"
+   static let profile = "user"
 }
