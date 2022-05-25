@@ -13,8 +13,14 @@ struct HomePage: View {
             ScrollView {
                 VStack {
                     PostCard()
+                    PostCard()
+                    PostCard()
+                    PostCard()
+                    PostCard()
+                    PostCard()
                 }
                 .padding(.top, 64)
+                .padding(.bottom, 64)
             }
             TopBar(title: "Editorial") { }
         }

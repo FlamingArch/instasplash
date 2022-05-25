@@ -46,49 +46,44 @@ struct PostCard: View {
         }
         
         ZStack {
-            GeometryReader { geo in
-                VStack(alignment: .leading, spacing: 12) {
-                    userBadge
-                    AsyncImage(url: URL(string: url)) { image in
-                        ZStack {
-                            let styled = image
-                                .resizable()
-                                .frame(width: geo.size.width, height: geo.size.width)
-                                .scaledToFill()
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
-                            
-                            styled
-                                .blur(radius: 20)
-                                .offset(x: 0, y: 12)
-                                .opacity(0.64)
-                            
-                            styled
-                        }
-                    } placeholder: {
-                        RoundedRectangle(cornerRadius: 16)
-                            .foregroundColor(Color.primary.opacity(0.12))
-                            .frame(width: geo.size.width, height: geo.size.width)
-                    }
-                    
-                    HStack(spacing: 10) {
-                        IconButton(icon: AppIcons.heart, text: "\(likes)", iconFilled: liked) {
-                            liked.toggle()
-                            if (liked) { likes += 1 } else { likes -= 1 }
-                        }
+            VStack(alignment: .leading, spacing: 12) {
+                userBadge
+                AsyncImage(url: URL(string: url)) { image in
+                    ZStack {
+                        let styled = image
+                            .resizable()
+                            .scaledToFill()
+                            .clipShape(RoundedRectangle(cornerRadius: 16))
                         
-                        IconButton(icon: AppIcons.download) {
-                            print("NOT IMPLEMENTED: Download Button")
-                        }
+                        styled
+                            .blur(radius: 20)
+                            .offset(x: 0, y: 12)
+                            .opacity(0.64)
                         
-                        IconButton(icon: AppIcons.addToCollection) {
-                            print("NOT IMPLEMENTED: Add to Collections Button")
-                        }
+                        styled
                     }
-                    
-                    Text("\(duration) · \(location)")
-                        .foregroundColor(Color.primary.opacity(0.5))
-                        .font(.caption)
+                } placeholder: {
+                    RoundedRectangle(cornerRadius: 16).foregroundColor(Color.primary.opacity(0.12)).frame(height: 400)
                 }
+                
+                HStack(spacing: 10) {
+                    IconButton(icon: AppIcons.heart, text: "\(likes)", iconFilled: liked) {
+                        liked.toggle()
+                        if (liked) { likes += 1 } else { likes -= 1 }
+                    }
+                    
+                    IconButton(icon: AppIcons.download) {
+                        print("NOT IMPLEMENTED: Download Button")
+                    }
+                    
+                    IconButton(icon: AppIcons.addToCollection) {
+                        print("NOT IMPLEMENTED: Add to Collections Button")
+                    }
+                }
+                
+                Text("\(duration) · \(location)")
+                    .foregroundColor(Color.primary.opacity(0.5))
+                    .font(.caption)
             }
             .padding(24)
         }
