@@ -11,11 +11,11 @@ struct ContentView: View {
     
     var body: some View {
         TabNav {
-            TopBar(title: "Editorial") { }
-            TopBar(title: "Search") { }
-            TopBar(title: "New Post") { }
-            TopBar(title: "Notifications") { }
-            TopBar(title: "Profile") { }
+            HomePage()
+            SearchPage()
+            AddPage()
+            NotificationsPage()
+            UserPage()
         } tabs: {[
             AppIcons.home,
             AppIcons.search,
