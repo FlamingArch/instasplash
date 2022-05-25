@@ -10,12 +10,15 @@ import SwiftUI
 struct PostCard: View {
     private var profileUrl = "https://pbs.twimg.com/profile_images/1518129555977891842/FQbvy2DE_400x400.jpg"
     private var url = "https://source.unsplash.com/random"
-    private var user = "Flaming Arch"
+    private var user = "John Doe"
     private var available = true
-    private var likes = 200
+    private var duration = "21 hours ago"
+    private var location = "Zürich, Switzerland"
+    @State private var likes = Int.random(in: 0..<2000)
+    @State private var liked = false
     
     var body: some View {
-        var userBadge = HStack (alignment: .center, spacing: 8) {
+        let userBadge = HStack (alignment: .center, spacing: 8) {
             AsyncImage(url: URL(string: profileUrl)) { image in
                 image
                     .resizable()
@@ -66,6 +69,25 @@ struct PostCard: View {
                             .foregroundColor(Color.primary.opacity(0.12))
                             .frame(width: geo.size.width, height: geo.size.width)
                     }
+                    
+                    HStack(spacing: 10) {
+                        IconButton(icon: AppIcons.heart, text: "\(likes)", iconFilled: liked) {
+                            liked.toggle()
+                            if (liked) { likes += 1 } else { likes -= 1 }
+                        }
+                        
+                        IconButton(icon: AppIcons.download) {
+                            print("NOT IMPLEMENTED: Download Button")
+                        }
+                        
+                        IconButton(icon: AppIcons.addToCollection) {
+                            print("NOT IMPLEMENTED: Add to Collections Button")
+                        }
+                    }
+                    
+                    Text("\(duration) · \(location)")
+                        .foregroundColor(Color.primary.opacity(0.5))
+                        .font(.caption)
                 }
             }
             .padding(24)

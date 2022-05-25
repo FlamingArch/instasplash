@@ -31,6 +31,8 @@
 		34EEFCD3283E0D61000C336B /* UserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEFCD1283E0D61000C336B /* UserPage.swift */; };
 		34EEFCD5283E2417000C336B /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEFCD4283E2417000C336B /* PostCard.swift */; };
 		34EEFCD6283E2417000C336B /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEFCD4283E2417000C336B /* PostCard.swift */; };
+		34EEFCD8283E3211000C336B /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEFCD7283E3211000C336B /* IconButton.swift */; };
+		34EEFCD9283E3211000C336B /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEFCD7283E3211000C336B /* IconButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,7 @@
 		34EEFCCE283E0D45000C336B /* NotificationsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPage.swift; sourceTree = "<group>"; };
 		34EEFCD1283E0D61000C336B /* UserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage.swift; sourceTree = "<group>"; };
 		34EEFCD4283E2417000C336B /* PostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
+		34EEFCD7283E3211000C336B /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 			children = (
 				34358769283B45E70007DD1E /* TopBar.swift */,
 				3435876C283B45F60007DD1E /* Navigation.swift */,
+				34EEFCD7283E3211000C336B /* IconButton.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -236,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34EEFCD8283E3211000C336B /* IconButton.swift in Sources */,
 				3435876D283B45F60007DD1E /* Navigation.swift in Sources */,
 				3435875D283B3ACA0007DD1E /* ContentView.swift in Sources */,
 				3435876A283B45E70007DD1E /* TopBar.swift in Sources */,
@@ -254,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34EEFCD9283E3211000C336B /* IconButton.swift in Sources */,
 				3435876E283B45F60007DD1E /* Navigation.swift in Sources */,
 				3435875E283B3ACA0007DD1E /* ContentView.swift in Sources */,
 				3435876B283B45E70007DD1E /* TopBar.swift in Sources */,
