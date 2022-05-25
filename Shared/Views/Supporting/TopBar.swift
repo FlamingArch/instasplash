@@ -7,11 +7,50 @@
 
 import SwiftUI
 
-struct TopBar: View {
+struct TopBar<Content: View>: View {
+    var title: String
+    var actions: Content?
+    
     var body: some View {
-        VStack {
-            Text("Instasplash")
-            Spacer()
+        GeometryReader { geo in
+            VStack {
+                HStack {
+                    Text(title)
+                        .font(.system(size: 32))
+                        .bold()
+                    Spacer()
+                    actions
+                }
+                .frame(width: geo.size.width, alignment: .leading)
+                .padding(24)
+                .background(
+                    LinearGradient(
+                        colors: [Color.background, Color.background.opacity(0)],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .edgesIgnoringSafeArea(.top)
+                )
+                Spacer()
+            }
         }
     }
+    
+    init(title: String, @ViewBuilder actions: ()->Content?) {
+        self.title = title
+        self.actions = actions()
+    }
+}
+
+public extension Color {
+
+    #if os(macOS)
+    static let background = Color(NSColor.windowBackgroundColor)
+    static let secondaryBackground = Color(NSColor.underPageBackgroundColor)
+    static let tertiaryBackground = Color(NSColor.controlBackgroundColor)
+    #else
+    static let background = Color(UIColor.systemBackground)
+    static let secondaryBackground = Color(UIColor.secondarySystemBackground)
+    static let tertiaryBackground = Color(UIColor.tertiarySystemBackground)
+    #endif
 }

@@ -14,27 +14,30 @@ struct TabNav: View  {
     let tabs: [String]
     
     var body: some View {
-        ZStack {
-            pages[selectedPage]
-        }
         
         GeometryReader { geo in
+            ZStack {
+                pages[selectedPage]
+            }.frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+            
             VStack {
                 Spacer()
                 
                 HStack(alignment: .center) {
-                    ForEach(0..<tabs.count) { NavIcon(icon:tabs[$0], selected: $selectedPage, index: $0, geometry: geo) }
+                    ForEach(0..<tabs.count) { NavIcon(icon:tabs[$0], selected: $selectedPage, index: $0, geometry: geo, count: tabs.count) }
                 }
                 .frame(width: geo.size.width)
-                .background(.background)
+                .background(Color.background.opacity(0.8))
             }
         }
-
+        
     }
     
     init<Views>(@ViewBuilder pages: () -> TupleView<Views>, tabs: ()->[String]) {
         self.pages = pages().getViews
         self.tabs = tabs()
+        
+        assert(self.tabs.count == self.pages.count)
     }
 }
 
@@ -43,10 +46,11 @@ private struct NavIcon: View {
     @Binding var selected: Int
     var index: Int
     var geometry: GeometryProxy
+    var count: Int
     
     var body: some View {
         Image(icon + (selected == index ? ".filled" : ""))
-            .frame(width: geometry.size.width / 6, height: 64, alignment: .center)
+            .frame(width: geometry.size.width / CGFloat(count + 1), height: 64, alignment: .center)
             .onTapGesture {
                 selected = index
             }
