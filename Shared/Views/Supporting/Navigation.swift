@@ -27,7 +27,7 @@ struct TabNav: View  {
                     ForEach(0..<tabs.count) { NavIcon(icon:tabs[$0], selected: $selectedPage, index: $0, geometry: geo, count: tabs.count) }
                 }
                 .frame(width: geo.size.width)
-                .background(Color.background.opacity(0.8))
+                .background(Material.thin)
             }
         }
         
