@@ -56,9 +56,9 @@ struct PostCard: View {
                             .clipShape(RoundedRectangle(cornerRadius: 16))
                         
                         styled
-                            .blur(radius: 20)
+                            .blur(radius: 50)
                             .offset(x: 0, y: 12)
-                            .opacity(0.64)
+                            .opacity(0.5)
                         
                         styled
                     }

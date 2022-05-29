@@ -43,7 +43,6 @@ struct TopBar<Content: View>: View {
 }
 
 public extension Color {
-
     #if os(macOS)
     static let background = Color(NSColor.windowBackgroundColor)
     static let secondaryBackground = Color(NSColor.underPageBackgroundColor)

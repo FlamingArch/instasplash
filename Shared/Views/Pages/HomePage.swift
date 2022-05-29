@@ -11,7 +11,11 @@ struct HomePage: View {
     var body: some View {
         ZStack {
             ScrollView {
-                VStack {
+                LazyVStack {
+                    PostCard()
+                    PostCard()
+                    PostCard()
+                    PostCard()
                     PostCard()
                     PostCard()
                     PostCard()
