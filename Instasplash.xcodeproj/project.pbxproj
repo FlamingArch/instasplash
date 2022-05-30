@@ -21,6 +21,10 @@
 		34358774283B47E50007DD1E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34358772283B47E50007DD1E /* Constants.swift */; };
 		34358776283B5C2F0007DD1E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34358775283B5C2F0007DD1E /* HomePage.swift */; };
 		34358777283B5C2F0007DD1E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34358775283B5C2F0007DD1E /* HomePage.swift */; };
+		348A21E2284495DE0059BB56 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A21E1284495DE0059BB56 /* Model.swift */; };
+		348A21E3284495DE0059BB56 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A21E1284495DE0059BB56 /* Model.swift */; };
+		348A21E52844967B0059BB56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A21E42844967B0059BB56 /* Extensions.swift */; };
+		348A21E62844967B0059BB56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A21E42844967B0059BB56 /* Extensions.swift */; };
 		34EEFCC9283E0D10000C336B /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEFCC8283E0D10000C336B /* SearchPage.swift */; };
 		34EEFCCA283E0D10000C336B /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEFCC8283E0D10000C336B /* SearchPage.swift */; };
 		34EEFCCC283E0D2D000C336B /* AddPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEFCCB283E0D2D000C336B /* AddPage.swift */; };
@@ -46,6 +50,8 @@
 		3435876C283B45F60007DD1E /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		34358772283B47E50007DD1E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		34358775283B5C2F0007DD1E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		348A21E1284495DE0059BB56 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		348A21E42844967B0059BB56 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		34EEFCC8283E0D10000C336B /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		34EEFCCB283E0D2D000C336B /* AddPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPage.swift; sourceTree = "<group>"; };
 		34EEFCCE283E0D45000C336B /* NotificationsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPage.swift; sourceTree = "<group>"; };
@@ -88,6 +94,8 @@
 				34358778283B74A80007DD1E /* Views */,
 				34358772283B47E50007DD1E /* Constants.swift */,
 				3435874D283B3ACA0007DD1E /* Assets.xcassets */,
+				348A21E1284495DE0059BB56 /* Model.swift */,
+				348A21E42844967B0059BB56 /* Extensions.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -250,8 +258,10 @@
 				34358776283B5C2F0007DD1E /* HomePage.swift in Sources */,
 				34EEFCCC283E0D2D000C336B /* AddPage.swift in Sources */,
 				34358773283B47E50007DD1E /* Constants.swift in Sources */,
+				348A21E2284495DE0059BB56 /* Model.swift in Sources */,
 				34EEFCCF283E0D45000C336B /* NotificationsPage.swift in Sources */,
 				34EEFCD2283E0D61000C336B /* UserPage.swift in Sources */,
+				348A21E52844967B0059BB56 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +279,10 @@
 				34358777283B5C2F0007DD1E /* HomePage.swift in Sources */,
 				34EEFCCD283E0D2D000C336B /* AddPage.swift in Sources */,
 				34358774283B47E50007DD1E /* Constants.swift in Sources */,
+				348A21E3284495DE0059BB56 /* Model.swift in Sources */,
 				34EEFCD0283E0D45000C336B /* NotificationsPage.swift in Sources */,
 				34EEFCD3283E0D61000C336B /* UserPage.swift in Sources */,
+				348A21E62844967B0059BB56 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
